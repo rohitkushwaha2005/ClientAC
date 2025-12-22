@@ -6,17 +6,29 @@ import SectionHeader from "@/components/shared/SectionHeader";
 import CTAButtons from "@/components/shared/CTAButtons";
 import FloatingCTA from "@/components/shared/FloatingCTA";
 
+// Import brand logos
+import daikinLogo from "@/assets/brands/daikin.png";
+import mitsubishiLogo from "@/assets/brands/mitsubishi.png";
+import ogeneralLogo from "@/assets/brands/ogeneral.png";
+import lgLogo from "@/assets/brands/lg.png";
+import voltasLogo from "@/assets/brands/voltas.png";
+import samsungLogo from "@/assets/brands/samsung.png";
+import lloydLogo from "@/assets/brands/lloyd.png";
+import hitachiLogo from "@/assets/brands/hitachi.png";
+import whirlpoolLogo from "@/assets/brands/whirlpool.png";
+import godrejLogo from "@/assets/brands/godrej.png";
+
 const brands = [
-  { name: "Daikin", logo: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=200&h=100&fit=crop&auto=format" },
-  { name: "Mitsubishi", logo: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=100&fit=crop&auto=format" },
-  { name: "O General", logo: "https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=200&h=100&fit=crop&auto=format" },
-  { name: "LG", logo: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=100&fit=crop&auto=format" },
-  { name: "Voltas", logo: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=200&h=100&fit=crop&auto=format" },
-  { name: "Samsung", logo: "https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=200&h=100&fit=crop&auto=format" },
-  { name: "Lloyd", logo: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=100&fit=crop&auto=format" },
-  { name: "Hitachi", logo: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=200&h=100&fit=crop&auto=format" },
-  { name: "Whirlpool", logo: "https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=200&h=100&fit=crop&auto=format" },
-  { name: "Godrej", logo: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=100&fit=crop&auto=format" },
+  { name: "Daikin", logo: daikinLogo },
+  { name: "Mitsubishi", logo: mitsubishiLogo },
+  { name: "O General", logo: ogeneralLogo },
+  { name: "LG", logo: lgLogo },
+  { name: "Voltas", logo: voltasLogo },
+  { name: "Samsung", logo: samsungLogo },
+  { name: "Lloyd", logo: lloydLogo },
+  { name: "Hitachi", logo: hitachiLogo },
+  { name: "Whirlpool", logo: whirlpoolLogo },
+  { name: "Godrej", logo: godrejLogo },
 ];
 
 const expertise = [
@@ -73,11 +85,15 @@ const Products = () => {
               {brands.map((brand, index) => (
                 <div 
                   key={brand.name}
-                  className="group bg-card rounded-2xl p-6 shadow-card border border-border/50 hover:border-primary/30 hover:-translate-y-1 transition-all duration-300 text-center"
+                  className="group bg-card rounded-2xl p-6 shadow-card border border-border/50 hover:border-primary/30 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 text-center animate-fade-in"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <div className="w-16 h-16 rounded-xl bg-secondary flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl font-bold text-primary">{brand.name.charAt(0)}</span>
+                  <div className="w-24 h-24 rounded-xl bg-secondary/50 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 p-3 overflow-hidden">
+                    <img 
+                      src={brand.logo} 
+                      alt={`${brand.name} logo`}
+                      className="w-full h-full object-contain filter dark:brightness-0 dark:invert"
+                    />
                   </div>
                   <h3 className="text-lg font-bold text-foreground">{brand.name}</h3>
                   <span className="text-xs text-muted-foreground">AC Service</span>
@@ -116,10 +132,14 @@ const Products = () => {
                   {brands.slice(0, 4).map((brand, index) => (
                     <div 
                       key={brand.name}
-                      className="aspect-square rounded-2xl gradient-hero p-6 flex items-center justify-center"
+                      className="aspect-square rounded-2xl bg-card border border-border/50 p-6 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-fade-in"
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
-                      <span className="text-4xl font-bold text-primary-foreground">{brand.name.charAt(0)}</span>
+                      <img 
+                        src={brand.logo} 
+                        alt={`${brand.name} logo`}
+                        className="w-full h-full object-contain filter dark:brightness-0 dark:invert"
+                      />
                     </div>
                   ))}
                 </div>
