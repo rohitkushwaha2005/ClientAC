@@ -1,13 +1,253 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import { 
+  Snowflake, 
+  ThermometerSnowflake, 
+  WashingMachine, 
+  Refrigerator, 
+  Flame,
+  Shield,
+  Clock,
+  Award,
+  Users,
+  Wrench,
+  Building
+} from "lucide-react";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import CTAButtons from "@/components/shared/CTAButtons";
+import ServiceCard from "@/components/shared/ServiceCard";
+import StatCard from "@/components/shared/StatCard";
+import SectionHeader from "@/components/shared/SectionHeader";
+import FloatingCTA from "@/components/shared/FloatingCTA";
+
+const services = [
+  {
+    title: "AC Repair",
+    description: "Expert AC repair services for all brands. Quick diagnosis and reliable fixes.",
+    icon: ThermometerSnowflake,
+  },
+  {
+    title: "Fridge Service",
+    description: "Complete refrigerator maintenance and repair for optimal cooling performance.",
+    icon: Refrigerator,
+  },
+  {
+    title: "Washing Machine",
+    description: "Professional washing machine repair for all types and brands.",
+    icon: WashingMachine,
+  },
+  {
+    title: "Oven & Geyser",
+    description: "Safe and reliable oven and geyser repair services at your doorstep.",
+    icon: Flame,
+  },
+];
+
+const stats = [
+  { value: "7", label: "Years Experience", suffix: "+" },
+  { value: "5", label: "Skilled Technicians", suffix: "+" },
+  { value: "1000", label: "Happy Customers", suffix: "+" },
+  { value: "3000", label: "Overall Services", suffix: "+" },
+  { value: "2000", label: "AC Installations", suffix: "+" },
+  { value: "120", label: "Piping Projects", suffix: "+" },
+];
+
+const features = [
+  { icon: Shield, title: "Trusted Service", description: "Reliable and honest work guaranteed" },
+  { icon: Clock, title: "Quick Response", description: "Same-day service availability" },
+  { icon: Award, title: "Expert Technicians", description: "Certified and experienced team" },
+  { icon: Users, title: "Customer First", description: "100% satisfaction commitment" },
+];
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Helmet>
+        <title>CoolCare - Trusted AC & Home Appliance Repair Services in Mumbai</title>
+        <meta 
+          name="description" 
+          content="Professional AC repair, installation, cleaning & home appliance services in Mumbai. 7+ years experience, 1000+ happy customers. Call now for same-day service!" 
+        />
+        <meta name="keywords" content="AC repair Mumbai, AC service Mumbai, appliance repair, refrigerator repair, washing machine repair" />
+        <link rel="canonical" href="https://coolcare.in" />
+      </Helmet>
+
+      <Header />
+      <FloatingCTA />
+
+      <main>
+        {/* Hero Section */}
+        <section className="relative min-h-screen flex items-center gradient-hero overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-primary-foreground rounded-full blur-3xl" />
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-foreground rounded-full blur-3xl" />
+          </div>
+          
+          <div className="container-custom relative z-10 pt-24 pb-16">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="text-primary-foreground space-y-6 animate-fade-in">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm text-sm font-medium">
+                  <Snowflake className="w-4 h-4" />
+                  Mumbai's Trusted Service Provider
+                </span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  Trusted AC & Home Appliance Repair Services in Mumbai
+                </h1>
+                <p className="text-xl text-primary-foreground/90 max-w-lg">
+                  AC Repair, Installation, Cleaning & Home Appliance Services at Your Doorstep. 
+                  Fast, reliable, and affordable!
+                </p>
+                <CTAButtons variant="hero" />
+                
+                {/* Trust Badges */}
+                <div className="flex flex-wrap gap-6 pt-4">
+                  {features.slice(0, 3).map((feature) => (
+                    <div key={feature.title} className="flex items-center gap-2">
+                      <feature.icon className="w-5 h-5 text-accent" />
+                      <span className="text-sm font-medium">{feature.title}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="hidden lg:block relative animate-slide-in-right">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-primary-foreground/10 rounded-3xl blur-2xl" />
+                  <div className="relative bg-primary-foreground/10 backdrop-blur-sm rounded-3xl p-8 border border-primary-foreground/20">
+                    <div className="grid grid-cols-2 gap-4">
+                      {features.map((feature, index) => (
+                        <div 
+                          key={feature.title}
+                          className="bg-primary-foreground/10 rounded-xl p-4 text-center hover:bg-primary-foreground/20 transition-colors"
+                          style={{ animationDelay: `${index * 0.1}s` }}
+                        >
+                          <feature.icon className="w-8 h-8 mx-auto mb-2 text-accent" />
+                          <h3 className="font-semibold text-sm">{feature.title}</h3>
+                          <p className="text-xs text-primary-foreground/70 mt-1">{feature.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Wave Divider */}
+          <div className="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" className="w-full">
+              <path 
+                d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" 
+                fill="hsl(var(--background))"
+              />
+            </svg>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="section-padding bg-background">
+          <div className="container-custom">
+            <SectionHeader
+              badge="Our Services"
+              title="Professional Appliance Services"
+              subtitle="From AC repair to washing machine maintenance, we handle all your home appliance needs with expertise."
+            />
+            
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {services.map((service, index) => (
+                <div 
+                  key={service.title} 
+                  className="opacity-0 animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "forwards" }}
+                >
+                  <ServiceCard {...service} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="section-padding bg-secondary/50">
+          <div className="container-custom">
+            <SectionHeader
+              badge="Our Track Record"
+              title="Numbers That Speak Quality"
+              subtitle="Years of dedicated service have made us Mumbai's trusted appliance repair partner."
+            />
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {stats.map((stat) => (
+                <StatCard key={stat.label} {...stat} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="section-padding bg-background">
+          <div className="container-custom">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <SectionHeader
+                  badge="Why Choose Us"
+                  title="Experience You Can Trust"
+                  subtitle="We're not just technicians – we're your neighbors committed to keeping your home comfortable."
+                  centered={false}
+                />
+                <div className="space-y-4">
+                  {[
+                    { icon: Wrench, text: "Expert technicians with 7+ years experience" },
+                    { icon: Clock, text: "Same-day service across Mumbai" },
+                    { icon: Shield, text: "Genuine spare parts with warranty" },
+                    { icon: Building, text: "Residential & commercial services" },
+                  ].map((item) => (
+                    <div key={item.text} className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border/50 hover:border-primary/30 transition-colors">
+                      <div className="w-10 h-10 rounded-lg gradient-hero flex items-center justify-center shrink-0">
+                        <item.icon className="w-5 h-5 text-primary-foreground" />
+                      </div>
+                      <span className="font-medium text-foreground">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-8">
+                  <CTAButtons />
+                </div>
+              </div>
+              
+              <div className="relative">
+                <div className="aspect-square rounded-3xl gradient-hero p-8 flex items-center justify-center">
+                  <div className="text-center text-primary-foreground">
+                    <Snowflake className="w-24 h-24 mx-auto mb-6 animate-float" />
+                    <h3 className="text-2xl font-bold mb-2">Available 7 Days</h3>
+                    <p className="text-primary-foreground/80">8:00 AM - 9:00 PM</p>
+                  </div>
+                </div>
+                <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground rounded-2xl px-6 py-4 shadow-lg">
+                  <span className="text-2xl font-bold">24/7</span>
+                  <span className="text-sm block">Support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="section-padding gradient-dark">
+          <div className="container-custom text-center">
+            <SectionHeader
+              title="Need AC or Appliance Service?"
+              subtitle="Get expert help from Mumbai's most trusted technicians. Same-day service available!"
+              light
+            />
+            <CTAButtons variant="hero" className="justify-center" />
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
   );
 };
 
