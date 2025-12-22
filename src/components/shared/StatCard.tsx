@@ -54,13 +54,18 @@ const StatCard = ({ value, label, suffix = "" }: StatCardProps) => {
   return (
     <div
       ref={cardRef}
-      className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/30 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
+      className="group relative text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/30 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-lg overflow-hidden"
     >
-      <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-        {displayValue}
-        {suffix}
+      {/* Animated background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/5 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      
+      <div className="relative">
+        <div className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
+          {displayValue}
+          <span className="text-accent">{suffix}</span>
+        </div>
+        <p className="text-muted-foreground font-medium group-hover:text-foreground transition-colors duration-300">{label}</p>
       </div>
-      <p className="text-muted-foreground font-medium">{label}</p>
     </div>
   );
 };
