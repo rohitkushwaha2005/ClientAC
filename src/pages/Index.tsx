@@ -293,18 +293,6 @@ const Index = () => {
             <CTAButtons variant="hero" className="justify-center" />
           </div>
         </section>
-
-        {/* CTA Section */}
-        <section className="section-padding gradient-dark">
-          <div className="container-custom text-center">
-            <SectionHeader
-              title="Need AC or Appliance Service?"
-              subtitle="Get expert help from Mumbai's most trusted technicians. Same-day service available!"
-              light
-            />
-            <CTAButtons variant="hero" className="justify-center" />
-          </div>
-        </section>
       </main>
 
       <Footer />
