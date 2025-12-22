@@ -1,73 +1,160 @@
-# Welcome to your Lovable project
+# Home Appliance & AC Service Website
 
-## Project info
+A professional, responsive service website built for a Mumbai-based home appliance repair and AC service company.  
+The website is designed for lead generation and business visibility, not for online selling.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 📌 Project Overview
 
-There are several ways of editing your application.
+This project is a multi-page business website that showcases home appliance services, supported brands, spare parts, service areas, company experience, and contact details.  
+The main goal is to help customers easily find services and connect via call or WhatsApp.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🌍 Service Location
 
-Changes made via Lovable will be committed automatically to this repo.
+- Mumbai, Maharashtra, India
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🧰 Services Offered
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- AC Repair  
+- AC Dry / Deep Cleaning  
+- AC Installation & Uninstallation  
+- AMC Services  
+- AC Piping Work  
+- Fridge Service & Maintenance  
+- Washing Machine Repair  
+- Oven & Geyser Repair  
 
-Follow these steps:
+Each service is displayed with clear descriptions and quick contact options.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📄 Website Pages
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Home** – Service highlights, company stats, call-to-action  
+- **About Company** – Business introduction and experience  
+- **Services** – Detailed service blocks  
+- **Service Areas** – Areas covered across Mumbai  
+- **Product Showcase** – Supported AC brands (view only)  
+- **Spare Parts** – Spare parts showcase with WhatsApp purchase option  
+- **Portfolio / Achievements** – Completed projects and work gallery  
+- **Contact Us** – Call, WhatsApp, enquiry form, and map
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 🏙️ Service Areas Covered
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Andheri  
+- Goregaon  
+- Malad  
+- Kandivali  
+- Borivali  
+- Dahisar  
+- Mira Road  
 
-**Use GitHub Codespaces**
+**Note:** AC piping and installation projects are covered all over Mumbai.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 🏢 Company Highlights
 
-This project is built with:
+- 7+ Years of Experience  
+- 5+ Skilled Technicians  
+- 1000+ Happy Customers  
+- 3000+ Overall Services Completed  
+- 2000+ AC Installations  
+- 120+ Flat / Home / Shop AC Piping Projects  
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 🏷️ Brands Supported (Showcase Only)
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+- Daikin  
+- Mitsubishi  
+- O General  
+- LG  
+- Voltas  
+- Samsung  
+- Lloyd  
+- Hitachi  
+- Whirlpool  
+- Godrej  
 
-## Can I connect a custom domain to my Lovable project?
+*No online selling or pricing is included.*
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🔩 Spare Parts Showcase
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- AC Remote  
+- Fridge Stand  
+- Washing Machine Stand  
+- AC Accessories  
+- Second-hand Spare Parts  
+
+**Purchase Method:** Buy via WhatsApp enquiry only.
+
+---
+
+## 📞 Contact Details
+
+- Phone: 7250770449  
+- Phone: 9004300667  
+- Contact options:
+  - Call button  
+  - WhatsApp chat  
+  - Contact enquiry form  
+
+---
+
+## ✨ Features
+
+- Fully responsive (mobile & desktop)  
+- Clean and professional UI  
+- WhatsApp click-to-chat integration  
+- Call-to-action buttons  
+- Image galleries for services and portfolio  
+- SEO-friendly structure  
+- Fast loading and easy navigation  
+
+---
+
+## 🛠️ Tech Stack
+
+- Frontend: HTML, CSS, JavaScript  
+- FrameWork: react.js,Typescript.js  
+- Backend & Databases: Supabase 
+- Theme: Dynamic
+- Plugins: Free and secure plugins  
+
+---
+
+---
+
+## 📈 Future Enhancements
+
+- Blog section for service tips  
+- Advanced local SEO  
+- Online booking system  
+- Customer reviews integration  
+
+---
+
+## 📄 License
+
+This project is created for business use and client demonstration purposes.
+
+---
+
+## 👤 Developer
+
+**Rohit Kumar Kushwaha**  
+Freelance Web Developer  
+Indore, India
+
+---
+
