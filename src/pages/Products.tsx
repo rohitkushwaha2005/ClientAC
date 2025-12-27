@@ -45,7 +45,7 @@ const Products = () => {
   return (
     <>
       <Helmet>
-        <title>AC Brands We Service - New & Second Hand AC Available | Ultimate Cool Care Mumbai</title>
+        <title>AC Brands We Service - New & Second Hand AC Available | ultimate cool care Mumbai</title>
         <meta 
           name="description" 
           content="We service all major AC brands - Daikin, Mitsubishi, O General, LG, Voltas, Samsung, Lloyd, Hitachi, Whirlpool, Godrej. New & Second Hand AC Available. Expert repair in Mumbai." 

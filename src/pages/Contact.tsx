@@ -92,10 +92,10 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Ultimate Cool Care AC & Appliance Services Mumbai</title>
+        <title>Contact Us - ultimate cool care AC & Appliance Services Mumbai</title>
         <meta 
           name="description" 
-          content="Contact Ultimate Cool Care for AC repair and appliance services in Mumbai. Call 7250770449 or 9004300667. Email: ultimatecoolcare00@gmail.com. Open 9:30 AM - 9:00 PM, Mon-Sun." 
+          content="Contact ultimate cool care for AC repair and appliance services in Mumbai. Call 7250770449 or 9004300667. Email: ultimatecoolcare00@gmail.com. Open 9:30 AM - 9:00 PM, Mon-Sun." 
         />
       </Helmet>
 
@@ -238,7 +238,7 @@ const Contact = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Ultimate Cool Care Mumbai Location"
+                  title="ultimate cool care Mumbai Location"
                 />
               </div>
             </div>

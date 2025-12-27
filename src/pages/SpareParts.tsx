@@ -39,7 +39,7 @@ const SpareParts = () => {
   return (
     <>
       <Helmet>
-        <title>Spare Parts - New & Second Hand AC Available | Ultimate Cool Care Mumbai</title>
+        <title>Spare Parts - New & Second Hand AC Available | ultimate cool care Mumbai</title>
         <meta 
           name="description" 
           content="Buy AC remotes, fridge stands, washing machine stands, and appliance spare parts in Mumbai. New & Second Hand AC Available. Quality parts at affordable prices. WhatsApp to order." 
@@ -72,8 +72,8 @@ const SpareParts = () => {
           <div className="container-custom">
             <SectionHeader
               badge="Available Parts"
-              title="Shop Spare Parts"
-              subtitle="Quality parts at competitive prices. New & Second Hand AC Available. Contact us on WhatsApp to order."
+              title="New & Second Hand AC Available"
+              subtitle="Quality parts at competitive prices. Contact us on WhatsApp to order."
             />
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">

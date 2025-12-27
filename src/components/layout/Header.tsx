@@ -50,12 +50,12 @@ const Header = () => {
       <nav className="glass-effect">
         <div className="container-custom flex items-center justify-between py-3">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center gap-2 group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <div className="w-10 h-10 rounded-lg overflow-hidden shadow-md group-hover:shadow-lg transition-shadow">
-              <img src={logoImage} alt="Ultimate Cool Care Logo" className="w-full h-full object-cover" />
+              <img src={logoImage} alt="ultimate cool care Logo" className="w-full h-full object-cover" />
             </div>
             <div className="hidden sm:block">
-              <span className="text-lg font-bold text-foreground">Ultimate Cool Care</span>
+              <span className="text-lg font-bold text-foreground">ultimate cool care</span>
               <span className="text-xs text-muted-foreground block -mt-1">AC & Appliance Services</span>
             </div>
           </Link>
@@ -66,6 +66,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                   location.pathname === item.href
                     ? "text-primary bg-primary/10"
@@ -140,7 +141,10 @@ const Header = () => {
                     ? "text-primary bg-primary/10"
                     : "text-muted-foreground hover:text-foreground hover:bg-muted"
                 }`}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
               >
                 {item.name}
               </Link>

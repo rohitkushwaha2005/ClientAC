@@ -6,47 +6,55 @@ import SectionHeader from "@/components/shared/SectionHeader";
 import CTAButtons from "@/components/shared/CTAButtons";
 import FloatingCTA from "@/components/shared/FloatingCTA";
 
+// Import unique portfolio images
+import acInstallationImg from "@/assets/portfolio/ac-installation.jpg";
+import acPipingImg from "@/assets/portfolio/ac-piping.jpg";
+import acServiceImg from "@/assets/portfolio/ac-service.jpg";
+import commercialAcImg from "@/assets/portfolio/commercial-ac.jpg";
+import restaurantCoolingImg from "@/assets/portfolio/restaurant-cooling.jpg";
+import homeAcOverhaulImg from "@/assets/portfolio/home-ac-overhaul.jpg";
+
 const projects = [
   {
     title: "Residential AC Installation",
     location: "Andheri West",
     description: "Complete AC installation with concealed piping for a 3BHK flat",
-    image: "https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=600&h=400&fit=crop&auto=format",
+    image: acInstallationImg,
     tags: ["Installation", "Piping", "Residential"],
   },
   {
     title: "Commercial AC Project",
     location: "Goregaon East",
     description: "Multi-unit AC installation for a corporate office space",
-    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=400&fit=crop&auto=format",
+    image: commercialAcImg,
     tags: ["Commercial", "Installation", "Office"],
   },
   {
     title: "Shop AC Piping",
     location: "Malad West",
     description: "Professional piping work for a retail showroom",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&auto=format",
+    image: acPipingImg,
     tags: ["Piping", "Commercial", "Retail"],
   },
   {
     title: "Flat AC Setup",
     location: "Kandivali East",
     description: "Complete AC setup for a new 2BHK apartment",
-    image: "https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=600&h=400&fit=crop&auto=format",
+    image: acServiceImg,
     tags: ["Installation", "Residential", "New Setup"],
   },
   {
     title: "Restaurant Cooling Solution",
     location: "Borivali West",
     description: "Custom cooling solution for a restaurant with multiple units",
-    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=400&fit=crop&auto=format",
+    image: restaurantCoolingImg,
     tags: ["Commercial", "Restaurant", "Multi-unit"],
   },
   {
     title: "Home AC Overhaul",
     location: "Dahisar East",
     description: "Complete service and maintenance for all home ACs",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&auto=format",
+    image: homeAcOverhaulImg,
     tags: ["Service", "Maintenance", "Residential"],
   },
 ];
@@ -62,7 +70,7 @@ const Portfolio = () => {
   return (
     <>
       <Helmet>
-        <title>Portfolio - AC Installation & Piping Projects Mumbai | CoolCare</title>
+        <title>Portfolio - AC Installation & Piping Projects Mumbai | ultimate cool care</title>
         <meta 
           name="description" 
           content="View our portfolio of AC installation, piping, and repair projects across Mumbai. 2000+ installations, 120+ piping projects completed." 

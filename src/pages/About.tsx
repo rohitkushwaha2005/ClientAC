@@ -45,10 +45,10 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - Ultimate Cool Care AC & Appliance Services Mumbai</title>
+        <title>About Us - ultimate cool care AC & Appliance Services Mumbai</title>
         <meta 
           name="description" 
-          content="Learn about Ultimate Cool Care - Mumbai's trusted AC and home appliance repair company with 7+ years experience and 1000+ happy customers." 
+          content="Learn about ultimate cool care - Mumbai's trusted AC and home appliance repair company with 7+ years experience and 1000+ happy customers." 
         />
       </Helmet>
 
@@ -61,7 +61,7 @@ const About = () => {
           <div className="container-custom">
             <div className="max-w-3xl mx-auto text-center">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary-foreground/10 text-sm font-medium mb-4">
-                About Ultimate Cool Care
+                About ultimate cool care
               </span>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Mumbai's Trusted AC & Appliance Service Partner
@@ -75,32 +75,42 @@ const About = () => {
 
         {/* Mumbai Trust Section with CSMT Image */}
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <img 
-              src={csmtImage} 
-              alt="CSMT Station Mumbai"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70" />
-          </div>
-          <div className="container-custom relative z-10">
-            <div className="max-w-2xl text-primary-foreground">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Mumbai's Trusted AC & Appliance Service
-              </h2>
-              <p className="text-lg text-primary-foreground/90 mb-6">
-                Serving the heart of Mumbai with pride. From Andheri to Borivali, from Malad to Mira Road, 
-                we've been keeping Mumbai homes cool and comfortable for over 7 years.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-primary-foreground/20">
-                  <span className="font-semibold">1000+</span> Happy Customers
-                </div>
-                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-primary-foreground/20">
-                  <span className="font-semibold">7+</span> Years of Service
-                </div>
-                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-primary-foreground/20">
-                  <span className="font-semibold">All</span> Mumbai Areas
+          <div className="container-custom">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* CSMT Image - Clearly Visible */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src={csmtImage} 
+                  alt="CSMT Station Mumbai - Gateway of India"
+                  className="w-full h-80 lg:h-96 object-cover"
+                />
+              </div>
+              
+              {/* Content */}
+              <div className="space-y-6">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                  Mumbai Identity
+                </span>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                  Mumbai's Trusted AC & Appliance Service
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Serving the heart of Mumbai with pride. From Andheri to Borivali, from Malad to Mira Road, 
+                  we've been keeping Mumbai homes cool and comfortable for over 7 years.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <div className="bg-primary/10 rounded-lg px-4 py-3 border border-primary/20">
+                    <span className="text-2xl font-bold text-primary">1000+</span>
+                    <span className="block text-sm text-muted-foreground">Happy Customers</span>
+                  </div>
+                  <div className="bg-primary/10 rounded-lg px-4 py-3 border border-primary/20">
+                    <span className="text-2xl font-bold text-primary">7+</span>
+                    <span className="block text-sm text-muted-foreground">Years of Service</span>
+                  </div>
+                  <div className="bg-primary/10 rounded-lg px-4 py-3 border border-primary/20">
+                    <span className="text-2xl font-bold text-primary">All</span>
+                    <span className="block text-sm text-muted-foreground">Mumbai Areas</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -119,7 +129,7 @@ const About = () => {
                 />
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Ultimate Cool Care was founded with a simple mission: to provide honest, reliable, and 
+                    ultimate cool care was founded with a simple mission: to provide honest, reliable, and 
                     affordable home appliance services to Mumbai residents. What started as a small 
                     team of passionate technicians has grown into one of the city's most trusted 
                     service providers.
@@ -185,7 +195,7 @@ const About = () => {
         <section className="section-padding gradient-dark">
           <div className="container-custom text-center">
             <SectionHeader
-              title="Ready to Experience the Ultimate Cool Care Difference?"
+              title="Ready to Experience the ultimate cool care Difference?"
               subtitle="Join our family of 1000+ satisfied customers. Contact us today!"
               light
             />
