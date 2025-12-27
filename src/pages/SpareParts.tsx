@@ -71,8 +71,8 @@ const SpareParts = () => {
         <section className="section-padding bg-background">
           <div className="container-custom">
             <SectionHeader
-              badge="Available Parts"
-              title="New & Second Hand AC Available"
+              badge="Spare Parts"
+              title="Available Parts"
               subtitle="Quality parts at competitive prices. Contact us on WhatsApp to order."
             />
 
@@ -110,33 +110,6 @@ const SpareParts = () => {
           </div>
         </section>
 
-        {/* New & Second Hand AC Section */}
-        <section className="section-padding bg-primary/5">
-          <div className="container-custom">
-            <div className="bg-card rounded-3xl p-8 md:p-12 shadow-card border border-primary/20 text-center">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                AC Sales
-              </span>
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                New & Second Hand AC Available
-              </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
-                Looking for a new AC or a budget-friendly second-hand option? We have quality ACs from top brands. 
-                All second-hand units are thoroughly tested and come with a service warranty!
-              </p>
-              <Button variant="whatsapp" size="lg" asChild>
-                <a
-                  href="https://wa.me/917250770449?text=Hi! I'm interested in buying an AC. Please share available options."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Enquire About AC on WhatsApp
-                </a>
-              </Button>
-            </div>
-          </div>
-        </section>
 
         {/* Info Section */}
         <section className="section-padding bg-secondary/50">
