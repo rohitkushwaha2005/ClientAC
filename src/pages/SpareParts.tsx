@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import FloatingCTA from "@/components/shared/FloatingCTA";
 import fridgeStandImage from "@/assets/fridge-stand.jpg";
 import acRemoteImage from "@/assets/ac-remote.jpg";
+import blowerAccessoriesImage from "@/assets/blower-accessories.jpg";
 
 const spareParts = [
   {
@@ -27,7 +28,7 @@ const spareParts = [
   {
     name: "AC Accessories / Blower",
     description: "Blowers, filters, and essential AC parts",
-    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=300&fit=crop&auto=format",
+    image: blowerAccessoriesImage,
   },
   {
     name: "Second-Hand Spare Parts",
