@@ -6,12 +6,13 @@ import SectionHeader from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/button";
 import FloatingCTA from "@/components/shared/FloatingCTA";
 import fridgeStandImage from "@/assets/fridge-stand.jpg";
+import acRemoteImage from "@/assets/ac-remote.jpg";
 
 const spareParts = [
   {
     name: "AC Remote",
     description: "Universal and brand-specific AC remotes available",
-    image: "https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=400&h=300&fit=crop&auto=format",
+    image: acRemoteImage,
   },
   {
     name: "Fridge Stand",
