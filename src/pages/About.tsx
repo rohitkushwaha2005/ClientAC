@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import SectionHeader from "@/components/shared/SectionHeader";
 import CTAButtons from "@/components/shared/CTAButtons";
 import FloatingCTA from "@/components/shared/FloatingCTA";
+import csmtImage from "@/assets/csmt-station.jpg";
 
 const values = [
   {
@@ -44,23 +45,23 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - CoolCare AC & Appliance Services Mumbai</title>
+        <title>About Us - Ultimate Cool Care AC & Appliance Services Mumbai</title>
         <meta 
           name="description" 
-          content="Learn about CoolCare - Mumbai's trusted AC and home appliance repair company with 7+ years experience and 1000+ happy customers." 
+          content="Learn about Ultimate Cool Care - Mumbai's trusted AC and home appliance repair company with 7+ years experience and 1000+ happy customers." 
         />
       </Helmet>
 
       <Header />
       <FloatingCTA />
 
-      <main className="pt-20">
+      <main className="pt-28">
         {/* Hero Section */}
         <section className="section-padding gradient-hero text-primary-foreground">
           <div className="container-custom">
             <div className="max-w-3xl mx-auto text-center">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary-foreground/10 text-sm font-medium mb-4">
-                About CoolCare
+                About Ultimate Cool Care
               </span>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Mumbai's Trusted AC & Appliance Service Partner
@@ -68,6 +69,40 @@ const About = () => {
               <p className="text-xl text-primary-foreground/90">
                 Dedicated to keeping your home comfortable with reliable, professional, and affordable appliance services.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Mumbai Trust Section with CSMT Image */}
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <img 
+              src={csmtImage} 
+              alt="CSMT Station Mumbai"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70" />
+          </div>
+          <div className="container-custom relative z-10">
+            <div className="max-w-2xl text-primary-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Mumbai's Trusted AC & Appliance Service
+              </h2>
+              <p className="text-lg text-primary-foreground/90 mb-6">
+                Serving the heart of Mumbai with pride. From Andheri to Borivali, from Malad to Mira Road, 
+                we've been keeping Mumbai homes cool and comfortable for over 7 years.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-primary-foreground/20">
+                  <span className="font-semibold">1000+</span> Happy Customers
+                </div>
+                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-primary-foreground/20">
+                  <span className="font-semibold">7+</span> Years of Service
+                </div>
+                <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-primary-foreground/20">
+                  <span className="font-semibold">All</span> Mumbai Areas
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -84,7 +119,7 @@ const About = () => {
                 />
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    CoolCare was founded with a simple mission: to provide honest, reliable, and 
+                    Ultimate Cool Care was founded with a simple mission: to provide honest, reliable, and 
                     affordable home appliance services to Mumbai residents. What started as a small 
                     team of passionate technicians has grown into one of the city's most trusted 
                     service providers.
@@ -150,7 +185,7 @@ const About = () => {
         <section className="section-padding gradient-dark">
           <div className="container-custom text-center">
             <SectionHeader
-              title="Ready to Experience the CoolCare Difference?"
+              title="Ready to Experience the Ultimate Cool Care Difference?"
               subtitle="Join our family of 1000+ satisfied customers. Contact us today!"
               light
             />

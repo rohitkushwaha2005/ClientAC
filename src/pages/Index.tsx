@@ -19,6 +19,7 @@ import ServiceCard from "@/components/shared/ServiceCard";
 import StatCard from "@/components/shared/StatCard";
 import SectionHeader from "@/components/shared/SectionHeader";
 import FloatingCTA from "@/components/shared/FloatingCTA";
+import acTechnicianImage from "@/assets/ac-technician-hero.jpg";
 
 const services = [
   {
@@ -63,13 +64,13 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>CoolCare - Trusted AC & Home Appliance Repair Services in Mumbai</title>
+        <title>Ultimate Cool Care - Trusted AC & Home Appliance Repair Services in Mumbai</title>
         <meta 
           name="description" 
-          content="Professional AC repair, installation, cleaning & home appliance services in Mumbai. 7+ years experience, 1000+ happy customers. Call now for same-day service!" 
+          content="Professional AC repair, installation, cleaning & home appliance services in Mumbai. 7+ years experience, 1000+ happy customers. Open 9:30 AM - 9:00 PM, Mon-Sun. Call now!" 
         />
-        <meta name="keywords" content="AC repair Mumbai, AC service Mumbai, appliance repair, refrigerator repair, washing machine repair" />
-        <link rel="canonical" href="https://coolcare.in" />
+        <meta name="keywords" content="AC repair Mumbai, AC service Mumbai, appliance repair, refrigerator repair, washing machine repair, Ultimate Cool Care" />
+        <link rel="canonical" href="https://ultimatecoolcare.in" />
       </Helmet>
 
       <Header />
@@ -77,12 +78,21 @@ const Index = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center gradient-hero overflow-hidden">
+        <section className="relative min-h-screen flex items-center overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <img 
+              src={acTechnicianImage} 
+              alt="AC Technician servicing air conditioner"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60" />
+          </div>
+          
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-20 left-10 w-72 h-72 bg-primary-foreground/10 rounded-full blur-3xl animate-float" />
             <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-foreground/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl animate-pulse-slow" />
             
             {/* Floating particles */}
             {[...Array(6)].map((_, i) => (
@@ -99,7 +109,7 @@ const Index = () => {
             ))}
           </div>
           
-          <div className="container-custom relative z-10 pt-24 pb-16">
+          <div className="container-custom relative z-10 pt-32 pb-16">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="text-primary-foreground space-y-6">
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm text-sm font-medium animate-fade-in border border-primary-foreground/20">
@@ -118,6 +128,13 @@ const Index = () => {
                   AC Repair, Installation, Cleaning & Home Appliance Services at Your Doorstep. 
                   Fast, reliable, and affordable!
                 </p>
+                
+                {/* Business Timing Badge */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent/20 border border-accent/30 animate-fade-in" style={{ animationDelay: "0.5s" }}>
+                  <Clock className="w-5 h-5 text-accent" />
+                  <span className="font-medium">Open: 9:30 AM – 9:00 PM | Monday to Sunday</span>
+                </div>
+                
                 <div className="animate-fade-in" style={{ animationDelay: "0.6s" }}>
                   <CTAButtons variant="hero" />
                 </div>
@@ -264,7 +281,7 @@ const Index = () => {
                       <div className="absolute inset-0 bg-primary-foreground/20 blur-2xl rounded-full" />
                     </div>
                     <h3 className="text-2xl font-bold mb-2">Available 7 Days</h3>
-                    <p className="text-primary-foreground/80">8:00 AM - 9:00 PM</p>
+                    <p className="text-primary-foreground/80">9:30 AM - 9:00 PM</p>
                   </div>
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground rounded-2xl px-6 py-4 shadow-xl animate-bounce-subtle">

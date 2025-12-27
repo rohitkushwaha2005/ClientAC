@@ -38,23 +38,24 @@ const expertise = [
   "Authorized service patterns followed",
   "Warranty-safe repair methods",
   "Brand-specific diagnostic tools",
+  "New & Second Hand AC Available",
 ];
 
 const Products = () => {
   return (
     <>
       <Helmet>
-        <title>AC Brands We Service - Daikin, LG, Samsung, Voltas & More | Mumbai</title>
+        <title>AC Brands We Service - New & Second Hand AC Available | Ultimate Cool Care Mumbai</title>
         <meta 
           name="description" 
-          content="We service all major AC brands - Daikin, Mitsubishi, O General, LG, Voltas, Samsung, Lloyd, Hitachi, Whirlpool, Godrej. Expert repair in Mumbai." 
+          content="We service all major AC brands - Daikin, Mitsubishi, O General, LG, Voltas, Samsung, Lloyd, Hitachi, Whirlpool, Godrej. New & Second Hand AC Available. Expert repair in Mumbai." 
         />
       </Helmet>
 
       <Header />
       <FloatingCTA />
 
-      <main className="pt-20">
+      <main className="pt-28">
         {/* Hero Section */}
         <section className="section-padding gradient-hero text-primary-foreground">
           <div className="container-custom">
@@ -66,7 +67,7 @@ const Products = () => {
                 Expert Service for All Major AC Brands
               </h1>
               <p className="text-xl text-primary-foreground/90">
-                Our technicians are trained to service all leading AC brands with genuine parts and expert care.
+                Our technicians are trained to service all leading AC brands with genuine parts and expert care. New & Second Hand AC Available!
               </p>
             </div>
           </div>
@@ -78,7 +79,7 @@ const Products = () => {
             <SectionHeader
               badge="Our Expertise"
               title="Brands We Service"
-              subtitle="From premium brands to popular choices, we handle them all with the same level of expertise."
+              subtitle="From premium brands to popular choices, we handle them all with the same level of expertise. New & Second Hand AC Available."
             />
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
@@ -153,7 +154,7 @@ const Products = () => {
           <div className="container-custom text-center">
             <SectionHeader
               title="Need Service for Your AC?"
-              subtitle="Whatever the brand, we've got you covered. Contact us for expert repair and maintenance."
+              subtitle="Whatever the brand, we've got you covered. New & Second Hand AC Available. Contact us for expert repair and maintenance."
               light
             />
             <CTAButtons variant="hero" className="justify-center" />

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Phone, MessageCircle, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Phone, MessageCircle, MapPin, Clock, Send, CheckCircle, Mail } from "lucide-react";
 import { z } from "zod";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -34,16 +34,16 @@ const contactInfo = [
     external: true,
   },
   {
-    icon: MapPin,
-    title: "Location",
-    details: ["Mumbai, Maharashtra", "India"],
-    action: null,
-    actionLabel: null,
+    icon: Mail,
+    title: "Email",
+    details: ["ultimatecoolcare00@gmail.com"],
+    action: "mailto:ultimatecoolcare00@gmail.com",
+    actionLabel: "Email Us",
   },
   {
     icon: Clock,
     title: "Working Hours",
-    details: ["Mon - Sun", "8:00 AM - 9:00 PM"],
+    details: ["Mon - Sun", "9:30 AM - 9:00 PM"],
     action: null,
     actionLabel: null,
   },
@@ -92,17 +92,17 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - CoolCare AC & Appliance Services Mumbai</title>
+        <title>Contact Us - Ultimate Cool Care AC & Appliance Services Mumbai</title>
         <meta 
           name="description" 
-          content="Contact CoolCare for AC repair and appliance services in Mumbai. Call 7250770449 or 9004300667. WhatsApp available for quick response." 
+          content="Contact Ultimate Cool Care for AC repair and appliance services in Mumbai. Call 7250770449 or 9004300667. Email: ultimatecoolcare00@gmail.com. Open 9:30 AM - 9:00 PM, Mon-Sun." 
         />
       </Helmet>
 
       <Header />
       <FloatingCTA />
 
-      <main className="pt-20">
+      <main className="pt-28">
         {/* Hero Section */}
         <section className="section-padding gradient-hero text-primary-foreground">
           <div className="container-custom">
@@ -114,7 +114,7 @@ const Contact = () => {
                 Get in Touch With Us
               </h1>
               <p className="text-xl text-primary-foreground/90">
-                Have a question or need service? We're here to help! Reach out via call, WhatsApp, or the form below.
+                Have a question or need service? We're here to help! Reach out via call, WhatsApp, email, or the form below.
               </p>
             </div>
           </div>
@@ -238,7 +238,7 @@ const Contact = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="CoolCare Mumbai Location"
+                  title="Ultimate Cool Care Mumbai Location"
                 />
               </div>
             </div>
@@ -250,7 +250,7 @@ const Contact = () => {
           <div className="container-custom text-center">
             <SectionHeader
               title="Prefer a Quick Chat?"
-              subtitle="WhatsApp us for instant response. We're available 7 days a week!"
+              subtitle="WhatsApp us for instant response. We're available 7 days a week, 9:30 AM - 9:00 PM!"
               light
             />
             <Button variant="whatsapp" size="xl" asChild>
