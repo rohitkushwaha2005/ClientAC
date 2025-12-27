@@ -11,7 +11,7 @@ const spareParts = [
   {
     name: "AC Remote",
     description: "Universal and brand-specific AC remotes available",
-    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=300&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=400&h=300&fit=crop&auto=format",
   },
   {
     name: "Fridge Stand",
@@ -26,7 +26,7 @@ const spareParts = [
   {
     name: "AC Accessories / Blower",
     description: "Blowers, filters, and essential AC parts",
-    image: "https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=400&h=300&fit=crop&auto=format",
+    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=300&fit=crop&auto=format",
   },
   {
     name: "Second-Hand Spare Parts",
