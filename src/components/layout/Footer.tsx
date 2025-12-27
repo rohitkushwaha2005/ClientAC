@@ -19,10 +19,10 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-lg overflow-hidden">
-                <img src={logoImage} alt="Ultimate Cool Care Logo" className="w-full h-full object-cover" />
+                <img src={logoImage} alt="ultimate cool care Logo" className="w-full h-full object-cover" />
               </div>
               <div>
-                <span className="text-lg font-bold">Ultimate Cool Care</span>
+                <span className="text-lg font-bold">ultimate cool care</span>
                 <span className="text-xs text-background/70 dark:text-muted-foreground block -mt-1">AC & Appliance Services</span>
               </div>
             </div>
@@ -131,7 +131,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-background/10 dark:border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-background/60 dark:text-muted-foreground text-sm text-center md:text-left">
-            © {currentYear} Ultimate Cool Care. All rights reserved.
+            © {currentYear} ultimate cool care. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm">
             <span className="text-background/60 dark:text-muted-foreground">Mumbai's Trusted AC & Appliance Services</span>

@@ -64,12 +64,12 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Ultimate Cool Care - Trusted AC & Home Appliance Repair Services in Mumbai</title>
+        <title>ultimate cool care - Trusted AC & Home Appliance Repair Services in Mumbai</title>
         <meta 
           name="description" 
           content="Professional AC repair, installation, cleaning & home appliance services in Mumbai. 7+ years experience, 1000+ happy customers. Open 9:30 AM - 9:00 PM, Mon-Sun. Call now!" 
         />
-        <meta name="keywords" content="AC repair Mumbai, AC service Mumbai, appliance repair, refrigerator repair, washing machine repair, Ultimate Cool Care" />
+        <meta name="keywords" content="AC repair Mumbai, AC service Mumbai, appliance repair, refrigerator repair, washing machine repair, ultimate cool care" />
         <link rel="canonical" href="https://ultimatecoolcare.in" />
       </Helmet>
 
@@ -79,60 +79,46 @@ const Index = () => {
       <main>
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center overflow-hidden">
-          {/* Background Image */}
+          {/* Background Image - Reduced overlay for better visibility */}
           <div className="absolute inset-0">
             <img 
               src={acTechnicianImage} 
               alt="AC Technician servicing air conditioner"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/50 to-transparent" />
           </div>
           
           {/* Animated Background Elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-primary-foreground/10 rounded-full blur-3xl animate-float" />
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-foreground/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
-            
-            {/* Floating particles */}
-            {[...Array(6)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-2 h-2 bg-primary-foreground/20 rounded-full animate-float"
-                style={{
-                  left: `${15 + i * 15}%`,
-                  top: `${20 + (i % 3) * 25}%`,
-                  animationDelay: `${i * 0.5}s`,
-                  animationDuration: `${4 + i}s`
-                }}
-              />
-            ))}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-primary-foreground/5 rounded-full blur-3xl animate-float" />
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-foreground/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
           </div>
           
           <div className="container-custom relative z-10 pt-32 pb-16">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="text-primary-foreground space-y-6">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm text-sm font-medium animate-fade-in border border-primary-foreground/20">
-                  <Snowflake className="w-4 h-4 animate-spin" style={{ animationDuration: "8s" }} />
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/90 backdrop-blur-sm text-sm font-medium animate-fade-in border border-primary/30 text-foreground shadow-lg">
+                  <Snowflake className="w-4 h-4 text-primary animate-spin" style={{ animationDuration: "8s" }} />
                   Mumbai's Trusted Service Provider
                 </span>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in drop-shadow-lg" style={{ animationDelay: "0.2s" }}>
                   Trusted AC & Home Appliance{" "}
                   <span className="relative inline-block">
-                    <span className="relative z-10 text-accent">Repair Services</span>
-                    <span className="absolute bottom-2 left-0 w-full h-3 bg-accent/30 -skew-x-6" />
+                    <span className="relative z-10 text-accent drop-shadow-md">Repair Services</span>
+                    <span className="absolute bottom-2 left-0 w-full h-3 bg-accent/40 -skew-x-6" />
                   </span>
                   {" "}in Mumbai
                 </h1>
-                <p className="text-xl text-primary-foreground/90 max-w-lg animate-fade-in" style={{ animationDelay: "0.4s" }}>
+                <p className="text-xl text-primary-foreground drop-shadow-md max-w-lg animate-fade-in" style={{ animationDelay: "0.4s" }}>
                   AC Repair, Installation, Cleaning & Home Appliance Services at Your Doorstep. 
                   Fast, reliable, and affordable!
                 </p>
                 
                 {/* Business Timing Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent/20 border border-accent/30 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-                  <Clock className="w-5 h-5 text-accent" />
-                  <span className="font-medium">Open: 9:30 AM – 9:00 PM | Monday to Sunday</span>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-background/90 backdrop-blur-sm border border-primary/30 animate-fade-in shadow-lg" style={{ animationDelay: "0.5s" }}>
+                  <Clock className="w-5 h-5 text-primary" />
+                  <span className="font-medium text-foreground">Open: 9:30 AM – 9:00 PM | Monday to Sunday</span>
                 </div>
                 
                 <div className="animate-fade-in" style={{ animationDelay: "0.6s" }}>
@@ -268,20 +254,23 @@ const Index = () => {
               </div>
               
               <div className="relative">
-                <div className="aspect-square rounded-3xl gradient-hero p-8 flex items-center justify-center relative overflow-hidden group">
-                  {/* Animated circles */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-48 h-48 border-2 border-primary-foreground/20 rounded-full animate-ping" style={{ animationDuration: "3s" }} />
-                    <div className="absolute w-64 h-64 border-2 border-primary-foreground/10 rounded-full animate-ping" style={{ animationDuration: "4s" }} />
-                  </div>
+                <div className="aspect-square rounded-3xl overflow-hidden relative group">
+                  {/* AC Technician Image as background */}
+                  <img 
+                    src={acTechnicianImage} 
+                    alt="AC Technician at work"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent" />
                   
-                  <div className="text-center text-primary-foreground relative z-10">
-                    <div className="relative">
-                      <Snowflake className="w-24 h-24 mx-auto mb-6 animate-float-rotate" />
-                      <div className="absolute inset-0 bg-primary-foreground/20 blur-2xl rounded-full" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-primary-foreground relative z-10">
+                      <div className="relative">
+                        <Snowflake className="w-20 h-20 mx-auto mb-4 animate-float-rotate drop-shadow-lg" />
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2 drop-shadow-lg">Available 7 Days</h3>
+                      <p className="text-primary-foreground/90 text-lg drop-shadow-md">9:30 AM - 9:00 PM</p>
                     </div>
-                    <h3 className="text-2xl font-bold mb-2">Available 7 Days</h3>
-                    <p className="text-primary-foreground/80">9:30 AM - 9:00 PM</p>
                   </div>
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground rounded-2xl px-6 py-4 shadow-xl animate-bounce-subtle">

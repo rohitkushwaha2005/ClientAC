@@ -70,7 +70,7 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>Our Services - AC Repair, Fridge, Washing Machine Service Mumbai</title>
+        <title>Our Services - AC Repair, Fridge, Washing Machine Service Mumbai | ultimate cool care</title>
         <meta 
           name="description" 
           content="Professional AC repair, installation, cleaning, fridge service, washing machine repair in Mumbai. Expert technicians, genuine parts, same-day service." 

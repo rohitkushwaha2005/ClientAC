@@ -20,10 +20,10 @@ const Areas = () => {
   return (
     <>
       <Helmet>
-        <title>Service Areas - AC Repair & Appliance Services in Mumbai</title>
+        <title>Service Areas - AC Repair & Appliance Services in Mumbai | ultimate cool care</title>
         <meta 
           name="description" 
-          content="CoolCare provides AC repair and appliance services across Mumbai - Andheri, Goregaon, Malad, Kandivali, Borivali, Dahisar, Mira Road and more." 
+          content="ultimate cool care provides AC repair and appliance services across Mumbai - Andheri, Goregaon, Malad, Kandivali, Borivali, Dahisar, Mira Road and more." 
         />
       </Helmet>
 
