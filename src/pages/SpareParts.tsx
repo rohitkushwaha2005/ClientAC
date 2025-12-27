@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import SectionHeader from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/button";
 import FloatingCTA from "@/components/shared/FloatingCTA";
+import fridgeStandImage from "@/assets/fridge-stand.jpg";
 
 const spareParts = [
   {
@@ -15,7 +16,7 @@ const spareParts = [
   {
     name: "Fridge Stand",
     description: "Heavy-duty stands for all fridge sizes",
-    image: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=400&h=300&fit=crop&auto=format",
+    image: fridgeStandImage,
   },
   {
     name: "Washing Machine Stand",
@@ -38,29 +39,29 @@ const SpareParts = () => {
   return (
     <>
       <Helmet>
-        <title>Spare Parts - AC Remote, Fridge Stand, Appliance Parts | Mumbai</title>
+        <title>Spare Parts - New & Second Hand AC Available | Ultimate Cool Care Mumbai</title>
         <meta 
           name="description" 
-          content="Buy AC remotes, fridge stands, washing machine stands, and appliance spare parts in Mumbai. Quality parts at affordable prices. WhatsApp to order." 
+          content="Buy AC remotes, fridge stands, washing machine stands, and appliance spare parts in Mumbai. New & Second Hand AC Available. Quality parts at affordable prices. WhatsApp to order." 
         />
       </Helmet>
 
       <Header />
       <FloatingCTA />
 
-      <main className="pt-20">
+      <main className="pt-28">
         {/* Hero Section */}
         <section className="section-padding gradient-hero text-primary-foreground">
           <div className="container-custom">
             <div className="max-w-3xl mx-auto text-center">
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary-foreground/10 text-sm font-medium mb-4">
-                Spare Parts
+                Spare Parts & AC Sales
               </span>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Quality Spare Parts & Accessories
+                New & Second Hand AC Available
               </h1>
               <p className="text-xl text-primary-foreground/90">
-                Genuine and quality-tested spare parts for your AC and home appliances. Order on WhatsApp!
+                Quality spare parts & AC units at competitive prices. New and pre-owned options available. Order on WhatsApp!
               </p>
             </div>
           </div>
@@ -72,7 +73,7 @@ const SpareParts = () => {
             <SectionHeader
               badge="Available Parts"
               title="Shop Spare Parts"
-              subtitle="Quality parts at competitive prices. Contact us on WhatsApp to order."
+              subtitle="Quality parts at competitive prices. New & Second Hand AC Available. Contact us on WhatsApp to order."
             />
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -109,6 +110,34 @@ const SpareParts = () => {
           </div>
         </section>
 
+        {/* New & Second Hand AC Section */}
+        <section className="section-padding bg-primary/5">
+          <div className="container-custom">
+            <div className="bg-card rounded-3xl p-8 md:p-12 shadow-card border border-primary/20 text-center">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                AC Sales
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                New & Second Hand AC Available
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
+                Looking for a new AC or a budget-friendly second-hand option? We have quality ACs from top brands. 
+                All second-hand units are thoroughly tested and come with a service warranty!
+              </p>
+              <Button variant="whatsapp" size="lg" asChild>
+                <a
+                  href="https://wa.me/917250770449?text=Hi! I'm interested in buying an AC. Please share available options."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Enquire About AC on WhatsApp
+                </a>
+              </Button>
+            </div>
+          </div>
+        </section>
+
         {/* Info Section */}
         <section className="section-padding bg-secondary/50">
           <div className="container-custom">
@@ -139,7 +168,7 @@ const SpareParts = () => {
           <div className="container-custom text-center">
             <SectionHeader
               title="Installation Service Available"
-              subtitle="Need help installing your spare part? Our technicians can help!"
+              subtitle="Need help installing your spare part or new AC? Our technicians can help!"
               light
             />
             <Button variant="hero" size="xl" asChild>
