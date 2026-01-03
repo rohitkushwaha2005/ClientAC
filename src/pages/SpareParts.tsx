@@ -8,6 +8,7 @@ import FloatingCTA from "@/components/shared/FloatingCTA";
 import fridgeStandImage from "@/assets/fridge-stand.jpg";
 import acRemoteImage from "@/assets/ac-remote.jpg";
 import blowerAccessoriesImage from "@/assets/blower-accessories.jpg";
+import secondHandPartsImage from "@/assets/second-hand-parts.jpg";
 
 const spareParts = [
   {
@@ -28,12 +29,12 @@ const spareParts = [
   {
     name: "AC Accessories / Blower",
     description: "Blowers, filters, and essential AC parts",
-    image: blowerAccessoriesImage,
+    image: secondHandPartsImage,
   },
   {
     name: "Second-Hand Spare Parts",
     description: "Quality tested used parts at affordable prices",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&auto=format",
+    image: secondHandPartsImage,
   },
 ];
 
