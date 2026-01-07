@@ -1,20 +1,42 @@
-import { Link, useNavigate } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Phone, Mail, MapPin, Clock, MessageCircle, ChevronDown } from "lucide-react";
 import logoImage from "@/assets/logo.png";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
+  const [quickLinksOpen, setQuickLinksOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   const handleLinkClick = (href: string) => {
     navigate(href);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const quickLinks = [
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Service Areas", href: "/areas" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+  const services = [
+    "AC Repair",
+    "AC Installation",
+    "AC Cleaning",
+    "Fridge Service",
+    "Washing Machine Repair",
+    "AMC Services",
+  ];
+
   return (
     <footer className="bg-foreground dark:bg-card text-background dark:text-foreground">
       <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
@@ -32,51 +54,106 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links - Accordion on Mobile */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {[
-                { name: "Home", href: "/" },
-                { name: "About Us", href: "/about" },
-                { name: "Services", href: "/services" },
-                { name: "Service Areas", href: "/areas" },
-                { name: "Contact", href: "/contact" },
-              ].map((link) => (
-                <li key={link.name}>
-                  <button
-                    onClick={() => handleLinkClick(link.href)}
-                    className="text-background/70 dark:text-muted-foreground hover:text-background dark:hover:text-foreground transition-colors text-sm text-left"
-                  >
-                    {link.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
+            {isMobile ? (
+              <div className="border-b border-background/20 dark:border-border pb-2">
+                <button
+                  onClick={() => setQuickLinksOpen(!quickLinksOpen)}
+                  className="flex items-center justify-between w-full py-3 text-lg font-semibold"
+                >
+                  <span>Quick Links</span>
+                  <ChevronDown 
+                    className={`w-5 h-5 transition-transform duration-300 ${quickLinksOpen ? 'rotate-180' : ''}`} 
+                  />
+                </button>
+                <div 
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    quickLinksOpen ? 'max-h-60 opacity-100 pb-3' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <ul className="space-y-2 pl-1">
+                    {quickLinks.map((link) => (
+                      <li key={link.name}>
+                        <button
+                          onClick={() => handleLinkClick(link.href)}
+                          className="text-background/70 dark:text-muted-foreground hover:text-background dark:hover:text-foreground transition-colors text-sm text-left py-1"
+                        >
+                          {link.name}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ) : (
+              <>
+                <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul className="space-y-2">
+                  {quickLinks.map((link) => (
+                    <li key={link.name}>
+                      <button
+                        onClick={() => handleLinkClick(link.href)}
+                        className="text-background/70 dark:text-muted-foreground hover:text-background dark:hover:text-foreground transition-colors text-sm text-left"
+                      >
+                        {link.name}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
           </div>
 
-          {/* Services */}
+          {/* Services - Accordion on Mobile */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Our Services</h3>
-            <ul className="space-y-2">
-              {[
-                "AC Repair",
-                "AC Installation",
-                "AC Cleaning",
-                "Fridge Service",
-                "Washing Machine Repair",
-                "AMC Services",
-              ].map((service) => (
-                <li key={service}>
-                  <button
-                    onClick={() => handleLinkClick("/services")}
-                    className="text-background/70 dark:text-muted-foreground hover:text-background dark:hover:text-foreground transition-colors text-sm text-left"
-                  >
-                    {service}
-                  </button>
-                </li>
-              ))}
-            </ul>
+            {isMobile ? (
+              <div className="border-b border-background/20 dark:border-border pb-2">
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className="flex items-center justify-between w-full py-3 text-lg font-semibold"
+                >
+                  <span>Our Services</span>
+                  <ChevronDown 
+                    className={`w-5 h-5 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} 
+                  />
+                </button>
+                <div 
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    servicesOpen ? 'max-h-60 opacity-100 pb-3' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <ul className="space-y-2 pl-1">
+                    {services.map((service) => (
+                      <li key={service}>
+                        <button
+                          onClick={() => handleLinkClick("/services")}
+                          className="text-background/70 dark:text-muted-foreground hover:text-background dark:hover:text-foreground transition-colors text-sm text-left py-1"
+                        >
+                          {service}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ) : (
+              <>
+                <h3 className="text-lg font-semibold mb-4">Our Services</h3>
+                <ul className="space-y-2">
+                  {services.map((service) => (
+                    <li key={service}>
+                      <button
+                        onClick={() => handleLinkClick("/services")}
+                        className="text-background/70 dark:text-muted-foreground hover:text-background dark:hover:text-foreground transition-colors text-sm text-left"
+                      >
+                        {service}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
           </div>
 
           {/* Contact Info */}
